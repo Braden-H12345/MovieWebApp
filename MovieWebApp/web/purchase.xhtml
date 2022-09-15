@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    
+    
+    <h:outputStylesheet library="css" name="main.css"  />    
+    <img src="logoart.png" id = "logo"></img>
+        <div id="content"></div>
+    <f:metadata>
+        <f:viewAction onPostback="false" action="#{simulatePurchase.loadPurchasePage}"/>
+    </f:metadata>
+        
+        
+    <h:head>
+        <title>Purchase Tickets</title>
+    </h:head>
+    <h:body>
+        <h1 id="intro">Thank you for your purchase!</h1>
+        <p id="description">You are currently purchasing tickets for the #{simulatePurchase.returnTime()} showing of #{simulatePurchase.returnTitle()} </p>
+        
+        <h:form>
+            <div id="result">
+            <h:outputLabel value="Quanity ($10 each): "/>
+            <h:inputText value="quantity"/>
+            <h:panelGrid columns="4">
+                <h:outputLabel value="Cardholder Name: "/>
+                <h:inputText value="name"/>
+                
+                <h:outputLabel value="Card Number: "/>
+                <h:inputText id="cardnumber" value="#{simulatePurchase.cardNum}">
+                </h:inputText>
+                
+                
+                
+                
+            </h:panelGrid>
+            <br/>
+                <br/>
+                <br/>
+                <br/>
+            <h:outputText value="#{simulatePurchase.outputText}"/>
+                
+           
+            <br/>    </div>
+            <div id="purchase_button">
+                <h:commandButton action="#{simulatePurchase.verify}" value="Purchase">
+            </h:commandButton>
+
+                </div>
+        </h:form>
+        
+
+        <br/>        
+    </h:body>
+</html>
+

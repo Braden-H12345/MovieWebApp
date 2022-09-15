@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    
+    <h:outputStylesheet library="css" name="main.css"  />    
+    <img src="logoart.png" id = "logo"></img>
+        <div id="content"></div>
+    <f:metadata>
+        <f:viewAction onPostback="false" action="#{theaterBean.loadTheaterPageInfo()}"/>
+    </f:metadata>
+    <h:head>
+        <title>#{theaterBean.selectedTheater.getTheatername()}</title>
+    </h:head>
+    <h:body>
+        <h1 id="intro">#{theaterBean.selectedTheater.getTheatername()}</h1>
+        <p id="description">The following movies are showing here: <br></br>(Click view description, showtimes, and purchase tickets)</p>
+        <div id="result">
+        <h:dataTable value="#{theaterBean.playingMovies}" var="movie">
+            <h:column>
+                <h:link value="#{movie.title}" outcome="movie.xhtml">
+                    <f:param name="movieid" value="#{movie.getMovieid()}"/>
+                    <f:param name="theaterid" value="#{theaterBean.selectedTheater.getTheaterid()}"/>
+                </h:link>    
+            </h:column>
+        </h:dataTable>
+        </div>
+    </h:body>
+</html>
+

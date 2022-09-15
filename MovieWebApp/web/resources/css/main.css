@@ -1,0 +1,147 @@
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+body {
+    background: #D11E1E;
+}
+
+#logo {
+    position: absolute;
+    left: 20%;
+    margin-left: -400px;
+    margin-top:-10px;
+    width: 800px;
+    height: 1000px;
+}
+
+#content{
+    position: absolute;
+    left: 65%;
+    margin-left: -450px;
+    margin-top: 100px;
+    background:#D11E1E;
+    width: 1000px;
+    height: 700px;
+    border-radius: 50px;
+}
+
+#intro{
+    position: absolute;
+    margin-top: 175px;
+    left:450px;
+    right:0px;
+    font-family: typo grotesk;
+    font-size: 30px;
+    text-align:center;
+}
+
+#zip_code {
+    position: absolute;
+    margin-top: 250px;
+    left:60%;
+    margin-left: -78px;
+    font-family: typo grotesk;
+    width:156px;
+}
+
+#search_button {
+    position: absolute;
+    margin-top: 290px;
+    left: 60%;
+    margin-left:-25px;
+    font-family: typo grotesk;
+    width:50px;
+}
+
+#output_text{
+    position: absolute;
+    margin-top: 320px;
+    left: 58%;
+    margin-left:-25px;
+    font-family: typo grotesk;
+    width:500px;
+}
+
+#result {
+    position: absolute;
+    margin-top: 300px;
+    left: 60%;
+    margin-left: -250px;
+    font-family: typo grotesk;
+    text-align: center;
+    width: 500px;
+    
+}
+
+ a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FFE400;
+}
+
+#description{
+    position: absolute;
+    margin-top: 250px;
+    left:450px;
+    right:0px;
+    text-align: center;
+    font-family: typo grotesk;
+}
+
+#movies{
+    position: absolute;
+    margin-top: 380px;
+    left: 65%;
+    margin-left: -60px;
+    font-family: typo grotesk;
+    text-align: center;
+    width: 120px;
+    
+}
+
+#times {
+    position: absolute;
+    margin-top: 580px;
+    font-family: typo grotesk;
+    text-align: center;
+    margin-left: 910px;
+}
+
+#purchase {
+    position: absolute;
+    margin-top: 580px;
+    font-family: typo grotesk;
+    text-align: center;
+    left:60%;
+    margin-left: -255px;
+    width:510px;
+}
+
+table{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#purchase_button{
+    position: absolute;
+    margin-top: 390px;
+    left: 60%;
+    margin-left: -35px;
+    width: 70px;
+    
+}
+
+#end_button {
+    position: absolute;
+    margin-top: 320px;
+    left: 60%;
+    margin-left: -75px;
+    width: 150px;
+}
